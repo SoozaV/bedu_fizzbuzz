@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch FizzBuzz</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <section>
+        <h1>FizzBuzz!</h1>
+        <h4>Introduce un valor entero entre 10 y 100 para conocer los múltiplos de 3 y 5, si el número es múltiplo de 3 aparecerá la leyenda "Fizz", si es múltiplo de 5 aparecerá la leyenda "Buzz", si el número es múltiplo de ambos aparecerá "FizzBuzz".</h4>
+        <input type="number" id="rango">
+        <button id="iniciar" class="btn">Iniciar</button>
+        <button id="mostrarCodigo" class="btn">Mostrar Código</button>
+        <div id="fizzbuzz">
+        </div>
+        <div id="codigo" class="codigo oculto">
+<pre>let valorRango = 100
+
+for(let i = 1; i <= valorRango; i++){
+    switch(true){
+        case ((i % 3 == 0) && (i % 5 == 0)):
+            console.log(i, "FizzBuzz")
+            break
+        case (i % 3 == 0):
+            console.log(i, 'Fizz')
+            break
+        case (i % 5 == 0):
+            console.log(i, "Buzz")
+            break
+        default:
+            console.log(i)
+    }
+}</pre>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
